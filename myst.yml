@@ -3,24 +3,10 @@ version: 1
 project:
   title: "LIGO Event Analysis"
   author: "Shrija Malla"
-  copyright: "2025"
+  affiliation: "UC Berkeley"
   github: "https://github.com/shrijamalla/hw3-shrija-malla"
-  binder: true
 
 site:
   title: "LIGO HW3 – Gravitational Wave Analysis"
   template: book-theme
-  nav:
-    - text: "Home"
-      file: index.md
-    - text: "Notebook"
-      file: LOSC_Event_tutorial.ipynb
 
-execute:
-  execute_notebooks: force
-
-html:
-  favicon: ""
-  use_repository_button: true
-  use_issues_button: true
-  use_edit_page_button: true
