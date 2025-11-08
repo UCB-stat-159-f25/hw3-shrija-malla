@@ -1,0 +1,47 @@
+Prompt #1 (ChatGPT): in markdown is ## bigger than ###
+Answer: ChatGPT said: Good question — in Markdown, fewer # symbols mean a larger heading
+
+
+Prompt #2 (ChatGPT): Can I have some examples of tests I could use for readligo.py?
+Answer: 
+Excellent — this is a really common task in the LIGO homework! You’re basically setting up unit tests for your readligo.py functions to make sure they work correctly.
+
+Let’s walk through what to test and show you example test functions you can include in ligotools/tests/test_readligo.py.
+
+1. Folder Structure
+Your repo should look something like this:
+ligotools/
+│
+├── __init__.py
+├── readligo.py
+└── tests/
+    ├── __init__.py
+    └── test_readligo.py
+Make sure both __init__.py files exist (even if empty) so Python recognizes the folders as packages.
+
+2. Understanding What to Test
+
+The typical readligo.py (used in the LIGO tutorial/homework) defines a function like this:
+def read_hdf5(filename, strain_chan=None):
+    """Read LIGO hdf5 data, returning strain, time, and metadata."""
+    import h5py
+    import numpy as np
+    with h5py.File(filename, 'r') as f:
+        meta = dict(f.attrs)
+        if strain_chan is None:
+            strain_chan = list(f['strain'].keys())[0]
+        strain = f['strain'][strain_chan][:]
+        dt = f['strain'][strain_chan].attrs['Xspacing']
+        t = np.arange(0, len(strain) * dt, dt)
+    return strain, t, meta
+If your version is similar, we can write tests that:
+
+	Verify the output types (e.g., NumPy arrays, dict)
+
+	Verify that the arrays have expected lengths or values
+
+	Optionally test metadata fields exist
+
+3. Dummy or Small Data File
+
+If you can’t include full LIGO data (because they’re large), you can make a tiny test file like example_data.hdf5 with fake data — or mock the output of read_hdf5
