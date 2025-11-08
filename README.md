@@ -2,11 +2,11 @@
 
 # HW 3: From Notebooks to Research Packages, Part II
 
-Click the badge below to launch this project on Binder
+Click the badge to launch this project on Binder
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/hw3-shrija-malla/HEAD)
 
 ## Description
 This repo contains a notebook that shows signal processing tasks on strain time-series data associated with the LIGO Event data releases from the LIGO Open Science Center (LOSC). The audio, data, and figures from this notebook are in their respective files. This repo also contains supportive files in order to view it as a MyST website (myst.yml). 
 
 ## Credit
-This repository is public so that Binder can find it. All code and data is based on the original LIGO Center for Open Science Tutorial Repository. This repository is a class exercise that restructures the original LIGO code for improved reproducibility, as a homework assignment for the Fall 2025 installment of UC Berkeley's Stat 159/259 course, _Reproducible and Collaborative Data Science. Authorship of the original analysis code rests with the LIGO collaboration.
+This repository is public so that Binder can find it. All code and data is based on the original LIGO Center for Open Science Tutorial Repository. This repository is a class exercise that restructures the original LIGO code for improved reproducibility, as a homework assignment for the Fall 2025 installment of UC Berkeley’s Stat 159/259 course, _Reproducible and Collaborative Data Science. Authorship of the original analysis code rests with the LIGO collaboration.
